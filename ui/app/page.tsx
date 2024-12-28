@@ -18,14 +18,14 @@ export default function Home() {
       "--copilot-kit-response-button-color": "#2563EB",
       "--copilot-kit-response-button-background-color": "#EFF6FF"
     } as CopilotKitCSSProperties}>
-      <CopilotKit runtimeUrl="/api/copilotkit" agent="chatbot">
+      <CopilotKit runtimeUrl="/api/copilotkit" agent="sql_agent">
         <div>
-          <h1 className="text-2xl text-center">🦙 LLama Chat 🦙</h1>
+          <h1 className="text-2xl text-center">SQL Agent</h1>
         </div>
         <CopilotChat
           className="h-full w-full"
           labels={{
-            title: "LLama Assistant",
+            title: "SQL Assistant",
             initial: "Hi! 👋 How can I assist you today?",
           }}
         />

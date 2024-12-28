@@ -8,15 +8,15 @@ from fastapi import FastAPI
 import uvicorn
 from copilotkit.integrations.fastapi import add_fastapi_endpoint
 from copilotkit import CopilotKitSDK, LangGraphAgent
-from my_agent.agent import graph
+from my_agent.old_agent import graph
 
 
 app = FastAPI()
 sdk = CopilotKitSDK(
     agents=[
         LangGraphAgent(
-            name="chatbot",
-            description="A sample chatbot",
+            name="sql_agent",
+            description="An agent for querying SQL databases and replying in natural language.",
             graph=graph,
         )
     ],
