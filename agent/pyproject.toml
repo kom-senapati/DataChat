@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "my_agent"
+name = "sql_agent"
 version = "0.1.0"
 description = "Starter"
 authors = ["Ariel Weinberger <weinberger.ariel@gmail.com>"]
@@ -25,6 +25,8 @@ python-dotenv = "^1.0.1"
 langchain-core = "^0.3.25"
 langgraph-cli = {extras = ["inmem"], version = "^0.1.64"}
 langchain-groq = "^0.2.2"
+ipykernel = "^6.29.5"
 
 [tool.poetry.scripts]
-demo = "my_agent.demo:main"
+server = "sql_agent.server:main"
+setup = "sql_agent.setup:main"
